@@ -15,11 +15,17 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Profil')),
+      appBar: AppBar(
+        title: const Text('Profil'),
+        backgroundColor: Colors.blueAccent,
+        foregroundColor: Colors.white,
+      ),
       drawer: AppDrawer(user: user),
-      body: Padding(
+      body: Container(
         padding: const EdgeInsets.all(16.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               'Nom d\'utilisateur : ${user.username}',
